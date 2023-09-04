@@ -1,137 +1,29 @@
 #include "libft.h"
 
-void *ft_strrchr(const char *str, int c)
+char	*ft_strchr(const char *str, int c)
 {
-	int i;
-
-	i = 0;
-	while (str[i] != c)
+	while ((char)c != *str)
 	{
-		if (str[i] == '\0')
-		{
-			return (NULL);
-		}
-		i++;
+		if (!*str)
+			return (0);
 		str++;
 	}
-	return (str);
+	return ((char *)str);
 }
- int		main(void)
+int main()
 {
-	char str[] = "Lucas";
-	char	a;
+    const char *str = "Hello, World!";
+    int searchChar = 'W'; // ASCII value of 'W'
 
-	a = 'u';
-	ft_strchr(str, a);
-	printf("%s", (char *)ft_strchr(str, a));
-	printf("\n");
-	printf("%s", strchr(str, a));
-	return (0);
+    char *result = ft_strchr(str, searchChar);
+
+    if (result != NULL) 
+    {
+        printf("Character '%c' found at position %ld in the string: \"%s\"\n", searchChar, result - str, str);
+    } else 
+    {
+        printf("Character '%c' not found in the string: \"%s\"\n", searchChar, str);
+    }
+
+    return 0;
 }
-
-~
-~
-~
-~
-~
-~
-~
-~
-~
-~
-~
-~
-~
-~
-~
-~
-~
-~
-~
-~
-~
-~
-~
-~
-~
-~
-~
-~
-~
-~
-~
-~
-~
-~
-~
-~
-~
-~
-~
-~
-~
-~
-~
-~
-~
-~
-~
-~
-~
-~
-ft_strchr.c[+] [unix] (13:40 31/08/2023)                                                                                                                                                                                                                                  19,1 All
--- INSERT --
-
-~
-~
-~
-~
-~
-~
-~
-~
-~
-~
-~
-~
-~
-~
-~
-~
-~
-~
-~
-~
-~
-~
-~
-~
-~
-~
-~
-~
-~
-~
-~
-~
-~
-~
-~
-~
-~
-~
-~
-~
-~
-~
-~
-~
-~
-~
-~
-~
-~
-~
-ft_strchr.c[+] [unix] (13:40 31/08/2023)                                                                                                                                                                                                                                  19,1 All
--- INSERT --
-
